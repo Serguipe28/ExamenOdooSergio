@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Declaracion de menus-->
+
+    <record model="ir.actions.act_window" id="comprador_action_window">
+        <field name="name"> Comprador </field>
+        <field name="res_model">wallaport.comprador</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Wallaport" id="wallaport_menu_root"/>
+
+    <!-- Menu items-->
+    <menuitem name="Comprador" id="comprador_menu" parent="wallaport_menu_root" action="comprador_action_window"/>
+
+
+    
+
+</odoo>

@@ -24,6 +24,12 @@
     # always loaded
     'data': [
         'views/estudiante.xml',
+        'views/ram.xml',
+        'views/comprador.xml',
+        'views/portatil.xml',
+        'views/ofertas.xml',
+        'views/disco_duro.xml',
+        
         
         
     ],

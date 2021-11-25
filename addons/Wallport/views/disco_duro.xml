@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+    <!-- Declaracion de menus-->
+
+    <record model="ir.actions.act_window" id="disco_duro_action_window">
+        <field name="name"> Disco duro </field>
+        <field name="res_model">wallaport.disco_duro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Wallaport" id="wallaport_menu_root"/>
+
+    <!-- Menu items-->
+    <menuitem name="Disco duro" id="disco_duro_menu" parent="wallaport_menu_root" action="disco_duro_action_window"/>
+
+
+
+</odoo>
