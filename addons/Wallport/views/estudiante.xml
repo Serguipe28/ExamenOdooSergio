@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Declaracion de menus-->
+
+    <record model="ir.actions.act_window" id="estudiante_action_window">
+        <field name="name"> Estudiante </field>
+        <field name="res_model">wallaport.estudiante</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Wallaport" id="wallaport_menu_root"/>
+
+    <!-- Menu items-->
+    <menuitem name="Estudiante" id="estudiante_menu" parent="wallaport_menu_root" action="estudiante_action_window"/>
+
+
+</odoo>
