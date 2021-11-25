@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    
+
+    <!-- Declaracion de menus-->
+
+    <record model="ir.actions.act_window" id="portatil_action_window">
+        <field name="name"> Portatil </field>
+        <field name="res_model">wallaport.portatil</field>
+        <field name="view_mode">tree,form,search,calendar</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Wallaport" id="wallaport_menu_root"/>
+
+    <!-- Menu items-->
+    <menuitem name="Portatil" id="portatil_menu" parent="wallaport_menu_root" action="portatil_action_window"/>
+
+
+    <!-- Vista search-->
+    <record model="ir.ui.view" id="portatil_view_search">
+        <field name="name">wallaport.portatil.view.search</field>
+        <field name="model">wallaport.portatil</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="modelo" />
+                <field name="marca" />
+                <field name="cpu" />
+                <!--Tamaño en disco total disponible, Cpu-->
+            </search>
+        </field>
+    </record>
+
+    <!-- Vista calendar-->
+    <record model="ir.ui.view" id="portatil_view_calendar">
+        <field name="name">wallaport.portatil.view.calendar</field>
+        <field name="model">wallaport.portatil</field>
+        <field name="arch" type="xml">
+            <calendar string="Ideas" date_start="fecha" color="fecha" mode="month">
+                <field name="modelo"/>
+                <field name="marca" />
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Vista tree -->
+
+    <record model="ir.ui.view" id="portatil_view_tree">
+        <field name="name">wallaport.portatil.view.tree</field>
+        <field name="model">wallaport.portatil</field>
+        <field name="arch" type="xml">
+            <tree string="Portatiles">
+                <field name="marca"/>
+                <field name="modelo"/>
+                <field name="cpu" />
+                <field name="precio" />
+            </tree>
+        </field>
+    </record>
 
 </odoo>
