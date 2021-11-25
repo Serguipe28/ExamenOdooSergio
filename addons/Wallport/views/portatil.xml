@@ -26,7 +26,7 @@
                 <field name="modelo" />
                 <field name="marca" />
                 <field name="cpu" />
-                <!--Tamaño en disco total disponible, Cpu-->
+                <!--Tamaño en disco total disponible-->
             </search>
         </field>
     </record>
@@ -54,6 +54,7 @@
                 <field name="modelo"/>
                 <field name="cpu" />
                 <field name="precio" />
+                <field name="vendido" />
             </tree>
         </field>
     </record>

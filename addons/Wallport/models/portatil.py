@@ -11,7 +11,7 @@ class Portatil(models.Model):
     tiempo_uso = fields.Float(string='Tiempo de uso', digits=(12, 30))
     precio = fields.Float(string='Precio de venta')
     observaciones = fields.Text(string='Campo de observaciones')
-    
+    vendido = fields.Boolean(string='vendido')
     
     #Relaciones entre tablas
     estudiante_id = fields.Many2one('wallaport.estudiante', string='Id estudiante')
@@ -19,7 +19,17 @@ class Portatil(models.Model):
     disco_id = fields.One2many('wallaport.disco_duro', 'portatil_id', string='Disco duro id')
     ofertas_id = fields.One2many('wallaport.ofertas', 'portatil_id', string='Id de las ofertas')
     
+    
+    
+    
 
+    # ram_total = fields.Char(compute='_compute_ram_total', string='')
+    
+    # @api.depends('ram_id')
+    # def _compute_ram_total(self):
+    #     for r in self:
+    #         r.ram_total = "ram: %" % r.ram_id
+            
 
     #3.11
     #3.12
